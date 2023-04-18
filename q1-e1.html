@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        name1=window.prompt("Qual seu nome?");
+        //document.write("Olá,"+ name1 +"!");
+        if(name1!=null && name1 !=""){
+            document.write("Olá,"+ name1 +"!")
+                } else{
+                    document.write("Olá,vsistante!");  
+                }
+    function validar() {
+        if(document.cadastro.nome.value == "" || document.cadastro.email.value == "" ) {
+            window.alert("Você deve preencher campo nome e email!")
+            document.cadastronome.focus();            
+            return false;
+        }
+    
+        frm.submit();
+    }
+            
+     function limpar(){
+        if(document.cadastro.nome.value =="" || document.cadastro.email.value ==""){
+
+            window.alert("Os campos já estão limpos!");        
+            return false;
+         
+            } else{
+                document.cadastro.nome.value = "";
+                document.cadastro.email.value = "";}
+                frm.submit();
+           
+         
+        } 
+    
+    
+
+    
+    
+    
+    
+        
+        
+
+    </script>
+ <form action="mailto: jacomepcb@gmail.com" method="post" enctype="type/plain" name="cadastro">
+<p> Preencha os campos abaixo e clique em enviar. Para apagar os dados, clique em "Limpar"</p>
+Nome: <input type="text" name="nome" size="35" required>
+E-mail: <input type="text" name="email" size="35" required>
+<br><br><br>
+<input type="submit" onclick="validar()" value="Enviar" >
+<input type="submit" onclick="limpar()" value="Limpar" >
+
+ </form>
+    
+</body>
+</html>
